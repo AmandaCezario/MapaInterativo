@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Estilos do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="menu-container" id="menu-container">
+      <div id="menu_maximo">
+        <div id="titulo_Lista_itens">
+
+          <div id="combo_perfil">
+            <div id="text">
+              <h1>Perfil</h1>
+            </div>
+            <div id="Seu_perfio" class="formata_lista">
+              <a href="#">Opção 1</a>
+              <a href="#">Opção 2</a>
+              <a href="#">Opção 3</a>
+            </div>
+          </div>
+
+          <div id="combo_sua_lista">
+            <div id="text">
+              <h1>Sua Lista</h1>
+            </div>
+            <div id="Sua_Lista" class="formata_lista">
+              <a href="#">Opção 1</a>
+              <a href="#">Opção 2</a>
+              <a href="#">Opção 3</a>
+            </div>
+          </div>
+
+          <div id="combo_sua_historico">
+            <div id="text">
+              <h1>Histórico</h1>
+            </div>
+            <div id="Historico" class="formata_lista">
+              <a href="#">Opção 1</a>
+              <a href="#">Opção 2</a>
+              <a href="#">Opção 3</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="final">
+          <a href="#">Ajuda</a>
+          <a href="#">Saida</a>
+        </div>
+      </div>
+
+      <div id="mn">
+        <div id="base_menu">
+          <button class="menu-btn" onclick=clikMenu()>☰</button>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#" id="perfil" onclick= "click_Itens_Menu('perfil')">
+            <img src="img\perfil.png" id="perfil_img" alt="Perfio"/>
+            <h2>Perfio</h2>
+          </a>
+          <a href="#" id="salvar" onclick= "click_Itens_Menu('salvar')">
+            <img src="img\salvar.png" id="salvar_img" alt="Salvar"/>
+            <h2>Salvos</h2>
+          </a>
+          <a href="#" id="historico" onclick= "click_Itens_Menu('historico')">
+            <img src="img\historia.png" id="salvar_img" alt="Salvar"/>
+            <h2>Salvos</h2>
+          </a>
+        </div>
+      </div>
+    </div> 
+    <div id="base_cima">
+      <div id="divBusca">
+        <input type="text" id="txtBusca" placeholder="Buscar..." />
+        <img src="img\pesquisa.png" id="btnBusca" alt="Buscar"/>
+      </div>
+      
+      <div id="filtros">
+        <button class="btn"><img src="img\doacao.png" id="btndoacao" alt="Doação"/><p>DOAÇÃO</p></button>
+
+        <button type="checkbox" class="btn"><img src="img\servico.png" id="btnservico" alt="Serviço"/>SERVIÇOS</button>
+    
+        <button type="checkbox" class="btn">  <img src="img\lendo.png" id="btnaprendizado" alt="Aprendizado"/> APRENDIZADO</button>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div id="map"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
