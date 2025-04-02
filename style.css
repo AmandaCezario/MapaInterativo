@@ -242,7 +242,7 @@ a:hover{
   border: 2px solid #2e8b57; /* Cor da borda */
 }
 
-@media (max-width: 380px) {
+@media (max-width: 300px) {
   .menu-container{
     position: absolute;
     z-index: 11;
