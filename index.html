@@ -7,91 +7,42 @@
     <!-- Estilos do Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="menu-container" id="menu-container">
-      <div id="menu_maximo">
-        <div id="titulo_Lista_itens">
-
-          <div id="combo_perfil">
-            <div id="text">
-              <h1>Perfil</h1>
-            </div>
-            <div id="Seu_perfio" class="formata_lista">
-              <a href="#">Opção 1</a>
-              <a href="#">Opção 2</a>
-              <a href="#">Opção 3</a>
-            </div>
+    <div id="map">
+      <div id="conteiner_menu">
+        <div id="menu">
+          <div id="lista_menu">
+            <h1>titulo</h1>
+            <h2>frase 1</h2>
+            <h2>frase 1</h2>
           </div>
-
-          <div id="combo_sua_lista">
-            <div id="text">
-              <h1>Sua Lista</h1>
-            </div>
-            <div id="Sua_Lista" class="formata_lista">
-              <a href="#">Opção 1</a>
-              <a href="#">Opção 2</a>
-              <a href="#">Opção 3</a>
-            </div>
-          </div>
-
-          <div id="combo_sua_historico">
-            <div id="text">
-              <h1>Histórico</h1>
-            </div>
-            <div id="Historico" class="formata_lista">
-              <a href="#">Opção 1</a>
-              <a href="#">Opção 2</a>
-              <a href="#">Opção 3</a>
+          <div id="div_btn_menu">
+            <button class="btn_m" id="menu-btn" onclick=clickMenu()>☰</button>
+            <div id="opcoes_btn">
+              <button class="btn" onclick=clickAbriOpcao1()><img class="img_m" src="img/perfil.png" alt="ico_perfio"></button>
+              <button class="btn" onclick=clickAbriOpcao2()><img class="img_m" src="img/historia.png" alt="ico_hitoria"></button>
+              <button class="btn" onclick=clickAbriOpcao3()><img class="img_m" src="img/salvar.png" alt="ico_salvar"></button>
             </div>
           </div>
         </div>
-
-        <div id="final">
-          <a href="#">Ajuda</a>
-          <a href="#">Saida</a>
+        <div id="pequisa_filtros">
+          <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="Faça a sua pesquisa">
+            <a class="search-btn" href="#"><i class="fas fa-search"></i></a>
+          </div>
+          <div id="barra_filtro">
+            <button class="btn-f"><img class="img_f" src="img/doacao.png" alt="ico_doação">Doação</button>
+            <button class="btn-f"><img class="img_f" src="img/lendo.png" alt="ico_educação">Educação</button>
+            <button class="btn-f"><img class="img_f" src="img/servico.png" alt="ico_trabalho">Trabalho</button>
+          </div>
         </div>
-      </div>
-
-      <div id="mn">
-        <div id="base_menu">
-          <button class="menu-btn" onclick=clikMenu()>☰</button>
-        </div>
-        <div class="menu" id="menu">
-          <a href="#" id="perfil" onclick= "click_Itens_Menu('perfil')">
-            <img src="img\perfil.png" id="perfil_img" alt="Perfio"/>
-            <h2>Perfio</h2>
-          </a>
-          <a href="#" id="salvar" onclick= "click_Itens_Menu('salvar')">
-            <img src="img\salvar.png" id="salvar_img" alt="Salvar"/>
-            <h2>Salvos</h2>
-          </a>
-          <a href="#" id="historico" onclick= "click_Itens_Menu('historico')">
-            <img src="img\historia.png" id="salvar_img" alt="Salvar"/>
-            <h2>Salvos</h2>
-          </a>
-        </div>
-      </div>
-    </div> 
-    <div id="base_cima">
-      <div id="divBusca">
-        <input type="text" id="txtBusca" placeholder="Buscar..." />
-        <img src="img\pesquisa.png" id="btnBusca" alt="Buscar"/>
-      </div>
-      
-      <div id="filtros">
-        <button class="btn"><img src="img\doacao.png" id="btndoacao" alt="Doação"/><p>DOAÇÃO</p></button>
-
-        <button type="checkbox" class="btn"><img src="img\servico.png" id="btnservico" alt="Serviço"/>SERVIÇOS</button>
-    
-        <button type="checkbox" class="btn">  <img src="img\lendo.png" id="btnaprendizado" alt="Aprendizado"/> APRENDIZADO</button>
       </div>
     </div>
-
-    <!-- Mapa -->
-    <div id="map"></div>
-    <script src="script.js"></script>
+    <script src="scripts\script_map.js"></script>
+    <script src="scripts\launch menu.js"></script>
   </body>
 </html>
