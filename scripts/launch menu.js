@@ -13,15 +13,15 @@ function ajustarLayout() {
         // Para telas menores (celulares), fecha o menu
         display_menu.style.display = "none";
         abri_fechar_menu.style.height = "50px"; // Reseta a altura do menu
-        btn_menu.style.backgroundColor = "lightblue";
+        // btn_menu.style.backgroundColor = "lightblue";
         return 720;
     } else if (larguraTela > 720 && larguraTela <= 1024) {
         // Para telas médias (tablets)
-        btn_menu.style.backgroundColor = "lightgreen";
+        // btn_menu.style.backgroundColor = "lightgreen";
         return 1024;
     } else {
         // Para telas maiores (desktops)
-        btn_menu.style.backgroundColor = "lightcoral";
+        // btn_menu.style.backgroundColor = "lightcoral";
         return 1025;
     }
 }
