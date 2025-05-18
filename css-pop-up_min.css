@@ -1,0 +1,20 @@
+.cssFont_2{
+    font-size: 0.5rem;
+}
+.cssFont_1{
+    font-size: 0.4rem;
+}
+
+.text-info{
+    position: relative;
+    background: red;
+    bottom: 20px;
+}
+.popup-content{
+    background: rebeccapurple;
+    width: 10rem;
+    height: 10rem;
+}
+.img_info{
+    width: 10rem;
+}

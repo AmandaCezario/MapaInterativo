@@ -86,6 +86,16 @@ function esconderDiv(idDaDiv) {
   }
 }
 
+const div = document.getElementById('modalDetalhes');
+document.addEventListener('click', function(event) {
+    const isClickInside = div.contains(event.target);
+    const isButtonClick = event.target.tagName === 'BUTTON';
+
+    if (!isClickInside && !isButtonClick) {
+      div.style.display = 'none';
+    }
+});
+
 
 function maisInfo(id) {
   var res = `http://localhost:3000/admin/pontos/${id}`;
