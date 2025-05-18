@@ -8,4 +8,11 @@ router.get('/home',(req,res)=>{
     });
 });
 
+// router.get('/home_a',(req,res)=>{
+//     res.render("map",{
+//         css:["style.css","css-info-local.css"],
+//         js:["script.js","script-btn-menu.js"]
+//     });
+// });
+
 module.exports = router

@@ -77,18 +77,28 @@ function criarPopupContent(dado) {
         </div>
 `;
 }
+function esconderDiv(idDaDiv) {
+  var div = document.getElementById(idDaDiv);
+  if (div) {
+    div.style.display = "none";
+  } else {
+    console.error("Div não encontrada: " + idDaDiv);
+  }
+}
 
-function maisInfo(ad){
-  console.log(ad)
-  fetch("http://localhost:3000/admin/pontos")
-    .then((res) => res.json())
-    .then((dados) => {
-      dados.forEach((ponto) => {
-        if (ponto.id === ad) {
-          console.log(ponto)
-        }
-        });
-});
+
+function maisInfo(id) {
+  var res = `http://localhost:3000/admin/pontos/${id}`;
+  fetch(res)
+    .then((res) => res.text()) // <-- aqui é .text() porque o servidor retorna HTML
+    .then((html) => {
+      map.closePopup();
+      document.getElementById("modalDetalhes").innerHTML = html;
+      document.getElementById("modalDetalhes").style.display = "block";
+    })
+    .catch(err => {
+      console.error("Erro ao buscar info:", err);
+    });
 }
 
 // Ícones personalizados para categorias
