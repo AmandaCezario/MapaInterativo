@@ -62,19 +62,20 @@ if ("geolocation" in navigator) {
 // Função para criar conteúdo do popup
 function criarPopupContent(dado) {
   return `
-        <div class="popup-content">
-        <img src="/img/ExemploDePopup.jpeg" alt="img_local" class="img_info" style="width: 300px">
-        <div class="text-info">
-          <h3 class="cssFont_2">${dado.nome}</h3>
-          <p class="cssFont_1">${dado.breve}</p>
-          <p class="cssFont_1"><strong>Endereço:</strong> ${dado.rua}, ${dado.numero} - ${dado.bairro}, ${dado.cidade} - ${dado.estado}</p>
-          <p class="cssFont_1"><strong>Descrição:</strong> ${dado.descricao}</p>
-          <p class="cssFont_1"><a href="mailto:${dado.email}" target="_blank">Contato</a></p>
-        </div>
-        </div>
-        <div>
-        <button class="myButton" onclick="maisInfo(${dado.id})">Ver Mais</button>
-        </div>
+    <div class="popup-content">
+      <div class="conteine-min">
+        <img src="/img/ExemploDePopup.jpeg" alt="img_local" class="img_info">
+        <div class="pop-info">
+          <div class="text-info-text">
+            <h3 class="cssFont_2">${dado.nome}</h3>
+            <p class="cssFont_1"><strong>Endereço:</strong> ${dado.rua}, ${dado.numero} - ${dado.bairro}, ${dado.cidade} -
+              ${dado.estado}</p>
+          </div>
+          <div>
+            <button class="myButton" id="btn-mais" onclick="maisInfo(${dado.id})">Ver Mais</button>
+          </div>
+      </div>
+  </div>
 `;
 }
 function esconderDiv(idDaDiv) {

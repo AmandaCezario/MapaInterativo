@@ -12,18 +12,16 @@
   <div class="popup-content">
     <div class="conteine-min">
       <img src="/public/img/ExemploDePopup.jpeg" alt="img_local" class="img_info">
-      <div class="text-info">
-        <h3 class="cssFont_2">${dado.nome}</h3>
-        <p class="cssFont_1">${dado.breve}</p>
-        <p class="cssFont_1"><strong>Endereço:</strong> ${dado.rua}, ${dado.numero} - ${dado.bairro}, ${dado.cidade} -
-          ${dado.estado}</p>
-        <p class="cssFont_1"><strong>Descrição:</strong> ${dado.descricao}</p>
-        <p class="cssFont_1"><a href="mailto:${dado.email}" target="_blank">Contato</a></p>
+      <div class="pop-info">
+        <div class="text-info-text">
+          <h3 class="cssFont_2">${dado.nome}</h3>
+          <p class="cssFont_1"><strong>Endereço:</strong> ${dado.rua}, ${dado.numero} - ${dado.bairro}, ${dado.cidade} -
+            ${dado.estado}</p>
+        </div>
+        <div>
+          <button class="myButton" onclick="maisInfo(${dado.id})">Ver Mais</button>
+        </div>
       </div>
-    </div>
-  </div>
-  <div>
-    <button class="myButton" onclick="maisInfo(${dado.id})">Ver Mais</button>
   </div>
 </body>
 

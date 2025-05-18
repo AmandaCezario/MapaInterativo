@@ -1,20 +1,28 @@
 .cssFont_2{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 .cssFont_1{
-    font-size: 0.4rem;
+    font-size: 0.5rem;
 }
 
-.text-info{
+.pop-info{
     position: relative;
     background: red;
-    bottom: 20px;
+    bottom: 50px;
+    /* margin: 3px; */
 }
 .popup-content{
+    padding: 8px;
     background: rebeccapurple;
-    width: 10rem;
-    height: 10rem;
+    width: 30%;
+    height: 9rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.text-info-text{
+    text-align: left;
 }
 .img_info{
-    width: 10rem;
+    width: 8.5rem;
+    /* width: max-content; */
 }

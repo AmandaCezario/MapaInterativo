@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/home',(req,res)=>{
     res.render("map",{
-        css:["style.css","css-info-local.css"],
+        css:["style.css","css-pop-up_min.css"],
         js:["script.js","script-btn-menu.js"]
     });
 });
