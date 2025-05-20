@@ -17,7 +17,7 @@ router.get("/gerenciarlocais", (req, res) => {
   res.render("gerencia_locais", {
     layout: "main_admin",
     css: ["style-card.css"],
-    // js:["script.js","script-btn-menu.js"]
+    js:["sripts-locais-salvos.js"]
   });
 });
 

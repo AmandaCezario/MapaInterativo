@@ -1,5 +1,10 @@
 body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-
+.conteine-min{
+  width: 200px;
+  height: 200px;
+  margin: 0; padding: 0;
+  /* background: #666666; */
+}
 .modal {
   display: flex;
   display:block;

@@ -88,13 +88,13 @@ function esconderDiv(idDaDiv) {
 }
 
 const div = document.getElementById('modalDetalhes');
-document.addEventListener('click', function(event) {
-    const isClickInside = div.contains(event.target);
-    const isButtonClick = event.target.tagName === 'BUTTON';
+document.addEventListener('click', function (event) {
+  const isClickInside = div.contains(event.target);
+  const isButtonClick = event.target.tagName === 'BUTTON';
 
-    if (!isClickInside && !isButtonClick) {
-      div.style.display = 'none';
-    }
+  if (!isClickInside && !isButtonClick) {
+    div.style.display = 'none';
+  }
 });
 
 
