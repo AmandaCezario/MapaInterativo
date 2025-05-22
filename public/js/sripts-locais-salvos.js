@@ -13,7 +13,7 @@ function criarCard(dado) {
         </a>
         <div class="btn_card">
             <button class="status">Ativo</button>
-            <button class="Editar">Editar</button>
+            <button class="Editar">Editar:</button>
         </div>
     </div>
 `;
