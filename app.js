@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // Arquivos estáticos
 app.use(express.static(path.join(__dirname, "public")));
 
-// Rotas
+// Rota
 app.use("/", home);
 app.use("/admin", admin);
 app.use("/form", form);
